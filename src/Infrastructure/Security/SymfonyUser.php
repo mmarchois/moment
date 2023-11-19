@@ -15,9 +15,7 @@ final class SymfonyUser implements UserInterface, PasswordAuthenticatedUserInter
     private string $firstName;
     private string $lastName;
     private string $password;
-    private ?string $avatar;
     private bool $isVerified;
-    private bool $isComplete;
     private array $roles;
 
     public function __construct(
@@ -29,9 +27,7 @@ final class SymfonyUser implements UserInterface, PasswordAuthenticatedUserInter
         $this->lastName = $user->getLastName();
         $this->password = $user->getPassword();
         $this->isVerified = $user->isVerified();
-        $this->isComplete = $user->isComplete();
-        $this->avatar = $user->getAvatar();
-        $this->roles = [$user->getRole()];
+        $this->roles = ['ROLE_ADMIN'];
     }
 
     public function getUuid(): string
@@ -49,19 +45,9 @@ final class SymfonyUser implements UserInterface, PasswordAuthenticatedUserInter
         return $this->firstName;
     }
 
-    public function isComplete(): bool
-    {
-        return $this->isComplete;
-    }
-
     public function getLastName(): string
     {
         return $this->lastName;
-    }
-
-    public function getAvatar(): ?string
-    {
-        return $this->avatar;
     }
 
     public function isVerified(): bool

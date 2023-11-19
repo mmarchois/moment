@@ -5,12 +5,10 @@ declare(strict_types=1);
 namespace App\Infrastructure\Form\User;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -29,10 +27,6 @@ final class RegisterUserFormType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => 'register.email',
             ])
-            ->add('howYouHeardAboutUs', TextareaType::class, [
-                'label' => 'register.howYouHeardAboutUs',
-                'required' => false,
-            ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'first_options' => [
@@ -43,10 +37,6 @@ final class RegisterUserFormType extends AbstractType
                     'label' => 'register.repeated_password',
                     'help' => 'register.repeated_password.help',
                 ],
-            ])
-            ->add('birthday', BirthdayType::class, [
-                'widget' => 'single_text',
-                'label' => 'register.birthday',
             ])
             ->add('save', SubmitType::class, [
                 'label' => 'register.submit',

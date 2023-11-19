@@ -3,18 +3,6 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
     <class name="App\Application\User\Command\UpdateProfileCommand">
-        <property name="file">
-            <constraint name="File">
-                <option name="maxSize">1024k</option>
-                <option name="extensions">
-                    <value>jpg</value>
-                    <value>jpeg</value>
-                    <value>webp</value>
-                    <value>png</value>
-                </option>
-                <option name="extensionsMessage">profile.error.file</option>
-            </constraint>
-        </property>
         <property name="firstName">
             <constraint name="NotBlank" />
             <constraint name="Length">
@@ -33,27 +21,6 @@
             <constraint name="Length">
                 <option name="max">100</option>
             </constraint>
-        </property>
-        <property name="gender">
-            <constraint name="NotBlank" />
-            <constraint name="Length">
-                <option name="max">20</option>
-            </constraint>
-        </property>
-        <property name="city">
-            <constraint name="NotBlank" />
-            <constraint name="Length">
-                <option name="max">150</option>
-            </constraint>
-        </property>
-        <property name="biography">
-            <constraint name="NotBlank" />
-            <constraint name="Length">
-                <option name="max">255</option>
-            </constraint>
-        </property>
-        <property name="birthday">
-            <constraint name="App\Infrastructure\Validator\MinimumAgeToRegisterConstraint" />
         </property>
     </class>
 </constraint-mapping>

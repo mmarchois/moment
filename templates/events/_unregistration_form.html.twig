@@ -1,4 +1,0 @@
-<form method="post" action="{{ path('app_events_unregister', { uuid: event.uuid }) }}">
-    <button class="j-btn j-btn--red">{{ 'events.cancel_registration'|trans }}</button>
-    <input type="hidden" name="token" value="{{ csrf_token('unregister-user-for-an-event') }}"/>
-</form>

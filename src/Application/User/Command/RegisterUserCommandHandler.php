@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace App\Application\User\Command;
 
-use App\Application\DateUtilsInterface;
 use App\Application\IdFactoryInterface;
 use App\Application\PasswordHasherInterface;
-use App\Domain\User\Enum\UserRoleEnum;
 use App\Domain\User\Exception\UserAlreadyRegisteredException;
 use App\Domain\User\Repository\UserRepositoryInterface;
 use App\Domain\User\Specification\IsUserAlreadyRegistered;
@@ -20,7 +18,6 @@ final readonly class RegisterUserCommandHandler
         private PasswordHasherInterface $passwordHasher,
         private IdFactoryInterface $idFactory,
         private IsUserAlreadyRegistered $isUserAlreadyRegistered,
-        private DateUtilsInterface $dateUtils,
     ) {
     }
 
@@ -39,11 +36,7 @@ final readonly class RegisterUserCommandHandler
                 lastName: $command->lastName,
                 email: $email,
                 password: $this->passwordHasher->hash($command->password),
-                role: UserRoleEnum::ROLE_USER->value,
-                birthday: $command->birthday,
-                registrationDate: $this->dateUtils->getNow(),
                 isVerified: false,
-                howYouHeardAboutUs: $command->howYouHeardAboutUs,
             ),
         );
     }
