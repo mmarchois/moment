@@ -25,21 +25,10 @@ final class GetUserProfileQueryHandler
         }
 
         $user = current($user);
-        $age = null;
-
-        if ($user['displayMyAge']) {
-            $age = \DateTime::createFromInterface($user['birthday'])
-                ->diff($this->dateUtils->getNow())
-                ->y;
-        }
 
         return new ProfileView(
             username: sprintf('%s %s.', $user['firstName'], $user['lastName'][0]),
-            city: $user['city'],
-            biography: $user['biography'],
-            age: $age,
-            avatar: $user['avatar'],
-            registrationDate: $user['registrationDate'],
+            email: $user['email'],
         );
     }
 }

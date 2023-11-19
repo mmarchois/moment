@@ -59,11 +59,7 @@
                     {% include 'posts/_card.html.twig' with { post } only %}
                 {% endfor %}
             </ul>
-            <div class="j-center">
-                <a href="{{ path('app_posts_list') }}" class="j-btn j-btn--lg">
-                    {{ 'dashboard.sell_all_posts'|trans }}
-                </a>
-            </div>
+
         </div>
     {% endif %}
 {% endblock main %}

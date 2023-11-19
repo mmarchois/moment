@@ -20,11 +20,7 @@
                     {{ 'nav.events'|trans }}
                 </a>
             </li>
-            <li>
-                <a href="{{ path('app_posts_list') }}" {% if app.current_route starts with 'app_posts' %}aria-current="page"{% endif %}>
-                    {{ 'nav.posts'|trans }}
-                </a>
-            </li>
+
         </ul>
 
         <hr>
@@ -44,17 +40,6 @@
 
         <hr>
 
-        <ul class="j-raw-list" data-mobile-only>
-            <li>
-                <a href="{{ path('app_privacy') }}">
-                    {{ 'nav.privacy'|trans }}
-                </a>
-            </li>
-            <li>
-                <a href="{{ path('app_cgu') }}">
-                    {{ 'nav.terms'|trans }}
-                </a>
-            </li>
-        </ul>
+
     {% endblock %}
 {% endembed %}

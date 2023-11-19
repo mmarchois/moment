@@ -4,11 +4,11 @@
         <body>
             <trans-unit id="common.title">
                 <source>common.title</source>
-                <target>moment</target>
+                <target>Moment</target>
             </trans-unit>
             <trans-unit id="common.tagline">
                 <source>common.tagline</source>
-                <target>La communauté où les 60 ans et plus se rencontrent !</target>
+                <target>Partagez vos moments</target>
             </trans-unit>
             <trans-unit id="nav.brand.title">
                 <source>nav.brand.title</source>
@@ -41,10 +41,6 @@
             <trans-unit id="nav.events">
                 <source>nav.events</source>
                 <target>Événements</target>
-            </trans-unit>
-            <trans-unit id="nav.posts">
-                <source>nav.posts</source>
-                <target>Articles</target>
             </trans-unit>
             <trans-unit id="nav.login">
                 <source>nav.login</source>

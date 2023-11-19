@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Persistence\Doctrine\Repository\Event;
 
-use App\Application\DateUtilsInterface;
 use App\Domain\Event\Event;
 use App\Domain\Event\Repository\EventRepositoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -15,7 +14,6 @@ final class EventRepository extends ServiceEntityRepository implements EventRepo
 {
     public function __construct(
         ManagerRegistry $registry,
-        private readonly DateUtilsInterface $dateUtils,
     ) {
         parent::__construct($registry, Event::class);
     }
@@ -25,12 +23,6 @@ final class EventRepository extends ServiceEntityRepository implements EventRepo
         FROM App\Domain\Event\Attendee a1
         WHERE a1.event = e.uuid';
 
-    private const IS_LOGGED_USER_REGISTERED_FOR_EVENT_QUERY = '
-        SELECT count(DISTINCT a2.uuid)
-        FROM App\Domain\Event\Attendee a2
-        WHERE a2.event = e.uuid
-        AND a2.user = :userUuid';
-
     public function findActiveEvents(
         int $pageSize,
         int $page,
@@ -38,24 +30,11 @@ final class EventRepository extends ServiceEntityRepository implements EventRepo
         bool $displayOnlyLoggedUserEvents = false,
     ): array {
         $qb = $this->createQueryBuilder('e')
-            ->select('e.uuid, e.title, e.location, e.picture, e.startDate')
+            ->select('e.uuid, e.title, e.date')
             ->addSelect(sprintf('(%s) as nbAttendees', self::NB_ATTENDEE_QUERY))
-            ->where('e.published = true')
-            ->andWhere('e.endDate > :currentDate')
-            ->setParameter('currentDate', $this->dateUtils->getNow())
-            ->orderBy('e.startDate', 'DESC')
+            ->orderBy('e.date', 'DESC')
             ->setFirstResult($pageSize * ($page - 1))
             ->setMaxResults($pageSize);
-
-        if ($loggedUserUuid) {
-            if ($displayOnlyLoggedUserEvents) {
-                $qb->andWhere(sprintf('(%s) > 0', self::IS_LOGGED_USER_REGISTERED_FOR_EVENT_QUERY));
-            } else {
-                $qb->addSelect(sprintf('(%s) as isLoggedUserRegisteredForEvent', self::IS_LOGGED_USER_REGISTERED_FOR_EVENT_QUERY));
-            }
-
-            $qb->setParameter('userUuid', $loggedUserUuid);
-        }
 
         $query = $qb->getQuery();
         $paginator = new Paginator($query, false);
@@ -79,28 +58,15 @@ final class EventRepository extends ServiceEntityRepository implements EventRepo
             ->select('
                 e.uuid,
                 e.title,
-                e.location,
-                e.picture,
-                e.startDate,
-                e.endDate,
-                e.description,
-                e.initialAvailablePlaces,
-                o.firstName as ownerFirstName
+                e.date,
             ')
             ->addSelect(sprintf('(%s) as nbAttendees', self::NB_ATTENDEE_QUERY))
             ->innerJoin('e.owner', 'o')
-            ->where('e.published = true')
-            ->andWhere('e.uuid = :uuid')
+            ->where('e.uuid = :uuid')
             ->setParameter('uuid', $uuid)
-            ->setMaxResults(1);
-
-        if ($loggedUserUuid) {
-            $qb
-                ->addSelect(sprintf('(%s) as isLoggedUserRegisteredForEvent', self::IS_LOGGED_USER_REGISTERED_FOR_EVENT_QUERY))
-                ->setParameter('userUuid', $loggedUserUuid);
-        }
-
-        return $qb->getQuery()->getResult();
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult();
     }
 
     public function findOneByUuid(string $uuid): ?Event

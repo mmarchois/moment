@@ -8,11 +8,7 @@ final readonly class ProfileView
 {
     public function __construct(
         public string $username,
-        public ?string $city,
-        public ?string $biography,
-        public ?int $age,
-        public ?string $avatar,
-        public ?\DateTimeInterface $registrationDate,
+        public string $email,
     ) {
     }
 }
