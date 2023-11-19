@@ -1,0 +1,35 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ 'events.title'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+    {% include 'common/breadcrumb.html.twig' with {
+        items: [
+            app.user ? {
+                title: 'nav.dashboard'|trans,
+                path: path('app_dashboard'),
+            } : {
+                title: 'nav.home'|trans,
+                path: path('app_home'),
+            },
+            { title: 'nav.events'|trans },
+        ]
+    } only %}
+    <div class="j-box j-background-flat-yellow" style="--box-padding: calc(3 * var(--w)) 0">
+        <div class="j-container">
+            <h1>{{ 'events.title'|trans }}</h1>
+            <div class="j-text-display">
+                <p>{{ 'events.jumbotron.line1'|trans }}</p>
+                <p>{{ 'events.jumbotron.line2'|trans }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="j-container j-box" style="--box-padding: calc(6 * var(--w)) 0">
+        <h2>{{ 'events.next_events.title'|trans }}</h2>
+
+        {% include 'events/_event_grid.html.twig' with { events: paginatedEvents.items } only %}
+    </div>
+{% endblock main %}

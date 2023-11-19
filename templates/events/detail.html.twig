@@ -1,0 +1,87 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ event.title }} - {{ parent() }}
+{% endblock %}
+
+{% block main_tag %}<main class="j-background-alt-yellow">{% endblock %}
+
+{% block main %}
+    {% include 'common/breadcrumb.html.twig' with {
+        items: [
+            app.user ? {
+                title: 'nav.dashboard'|trans,
+                path: path('app_dashboard'),
+            } : {
+                title: 'nav.home'|trans,
+                path: path('app_home'),
+            },
+            {
+                title: 'nav.events'|trans,
+                path: path('app_events_list'),
+            },
+            {
+                title: event.title,
+            }
+        ]
+    } only %}
+
+    <div data-testid="event" class="j-container j-background-default" style="--container-width: calc(92 * var(--w)); --container-padding: 0">
+        <figure>
+            <div class="j-frame" style="--frame-ratio: 16 / 9">
+                {% if event.picture %}
+                    <img src="{{ storageCdnUrl ~ '/' ~ event.picture }}" alt="{{ event.title }}"/>
+                {% else %}
+                    <img src="{{ asset('images/placeholder.webp') }}" alt="{{ event.title }}"/>
+                {% endif %}
+            </div>
+            <figcaption data-testid="event-location">{{ event.location }}</figcaption>
+        </figure>
+        <div class="j-box j-stack" style="--box-padding: min(6%, calc(6 * var(--w))); --stack-gap: calc(3 * var(--w))">
+            <h1>{{ event.title }}</h1>
+            <div>
+                <p class="j-text-bold">
+                    {{ event.startDate|date('j F Y à H\\hi') }} - {{ event.endDate|date('j F Y à H\\hi') }}
+                </p>
+                <p class="j-text-bold">
+                    {{ event.location }}
+                </p>
+            </div>
+
+            <div>
+                {{ event.description|raw }}
+            </div>
+
+            <div>
+                <h3>
+                    {{ 'events.detail.owner.title'|trans }}
+                </h3>
+
+                <p>
+                    {{ event.owner.firstName }}
+                </p>
+            </div>
+
+            <p>
+                {{ 'events.detail.registrations'|trans({ '%nbAttendees%': event.nbAttendees, '%nbAvailablePlaces%': event.nbAvailablePlaces })|raw }}
+            </p>
+
+            {% if not app.user %}
+                <p>
+                    {{ 'events.detail.register.anonymousWarning'|trans }}
+                </p>
+            {% endif %}
+
+            {% if event.isLoggedUserRegisteredForEvent %}
+                <p>
+                    {{ 'events.registered'|trans }}
+                </p>
+                {% include 'events/_unregistration_form.html.twig' with { event } only %}
+            {% elseif is_granted('ROLE_USER') and event.nbAvailablePlaces > 0  %}
+                <a data-testid="register-link" class="j-btn" href="{{ path('app_event_register', { uuid: event.uuid }) }}">
+                    {{ 'events.detail.register'|trans }}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock main %}

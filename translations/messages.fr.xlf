@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="common.title">
+                <source>common.title</source>
+                <target>moment</target>
+            </trans-unit>
+            <trans-unit id="common.tagline">
+                <source>common.tagline</source>
+                <target>La communauté où les 60 ans et plus se rencontrent !</target>
+            </trans-unit>
+            <trans-unit id="nav.brand.title">
+                <source>nav.brand.title</source>
+                <target>Retour à l'accueil</target>
+            </trans-unit>
+            <trans-unit id="nav.title">
+                <source>nav.title</source>
+                <target>Navigation principale</target>
+            </trans-unit>
+            <trans-unit id="nav.mobile.open">
+                <source>nav.mobile.open</source>
+                <target>Ouvrir la navigation principale</target>
+            </trans-unit>
+            <trans-unit id="nav.mobile.close">
+                <source>nav.mobile.close</source>
+                <target>Fermer la navigation principale</target>
+            </trans-unit>
+            <trans-unit id="nav.mobile.search">
+                <source>nav.mobile.search</source>
+                <target>Rechercher</target>
+             </trans-unit>
+            <trans-unit id="nav.profile">
+                <source>nav.profile</source>
+                <target>Mon profil</target>
+            </trans-unit>
+            <trans-unit id="nav.home">
+                <source>nav.home</source>
+                <target>Accueil</target>
+            </trans-unit>
+            <trans-unit id="nav.events">
+                <source>nav.events</source>
+                <target>Événements</target>
+            </trans-unit>
+            <trans-unit id="nav.posts">
+                <source>nav.posts</source>
+                <target>Articles</target>
+            </trans-unit>
+            <trans-unit id="nav.login">
+                <source>nav.login</source>
+                <target>Se connecter</target>
+            </trans-unit>
+            <trans-unit id="nav.register">
+                <source>nav.register</source>
+                <target>Créer un compte</target>
+            </trans-unit>
+            <trans-unit id="nav.dashboard">
+                <source>nav.dashboard</source>
+                <target>Mon espace</target>
+            </trans-unit>
+            <trans-unit id="nav.logout">
+                <source>nav.logout</source>
+                <target>Se déconnecter</target>
+            </trans-unit>
+            <trans-unit id="nav.help">
+                <source>nav.help</source>
+                <target>Aide</target>
+            </trans-unit>
+            <trans-unit id="nav.privacy">
+                <source>nav.privacy</source>
+                <target>Politique de confidentialité</target>
+            </trans-unit>
+            <trans-unit id="nav.terms">
+                <source>nav.terms</source>
+                <target>Conditions générales d'utilisation</target>
+            </trans-unit>
+            <trans-unit id="nav.terms.short">
+                <source>nav.terms.short</source>
+                <target>CGU</target>
+            </trans-unit>
+            <trans-unit id="footer.freepik_disclaimer">
+                <source>footer.freepik_disclaimer</source>
+                <target>Illustrations made by Freepik from storyset.com</target>
+            </trans-unit>
+            <trans-unit id="footer.events">
+                <source>footer.events</source>
+                <target>Événements</target>
+            </trans-unit>
+            <trans-unit id="footer.flatsharing">
+                <source>footer.flatsharing</source>
+                <target>Colocation</target>
+            </trans-unit>
+            <trans-unit id="footer.about_us">
+                <source>footer.about_us</source>
+                <target>Qui sommes-nous ?</target>
+            </trans-unit>
+            <trans-unit id="footer.articles">
+                <source>footer.articles</source>
+                <target>Articles</target>
+            </trans-unit>
+            <trans-unit id="footer.join">
+                <source>footer.join</source>
+                <target>Rejoindre</target>
+            </trans-unit>
+            <trans-unit id="footer.contact">
+                <source>footer.contact</source>
+                <target>Contact</target>
+            </trans-unit>
+            <trans-unit id="home.jumbotron.line1">
+                <source>home.jumbotron.line1</source>
+                <target>Participez à des événements près de chez vous et rencontrez des personnes partageant les mêmes envies et centres d’intérêts.</target>
+            </trans-unit>
+            <trans-unit id="home.jumbotron.line2">
+                <source>home.jumbotron.line2</source>
+                <target>Qui sait, vous pourriez très bien vous entendre voire rencontrer votre futur·e colocataire ? ;)</target>
+            </trans-unit>
+            <trans-unit id="home.jumbotron.cta">
+                <source>home.jumbotron.cta</source>
+                <target>Créer un compte</target>
+            </trans-unit>
+            <trans-unit id="home.upcoming_events">
+                <source>home.upcoming_events</source>
+                <target>Événements à venir</target>
+            </trans-unit>
+            <trans-unit id="home.upcoming_events.see_more">
+                <source>home.upcoming_events.see_more</source>
+                <target>Voir plus d'événements</target>
+            </trans-unit>
+            <trans-unit id="home.why_register">
+                <source>home.why_register</source>
+                <target>Pourquoi s'inscrire ?</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.find_events">
+                <source>home.why_register.find_events</source>
+                <target>Découvrir des événements gratuits près de chez soi</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.find_events.description">
+                <source>home.why_register.find_events.description</source>
+                <target>Chaque membre de la communauté moment peut proposer des activités, apéros ou sorties conviviales pour faire connaissance.</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.meet_people">
+                <source>home.why_register.meet_people</source>
+                <target>Faire de nouvelles rencontres</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.meet_people.description">
+                <source>home.why_register.meet_people.description</source>
+                <target>La communauté moment rassemble les 60 ans et plus ouverts à de nouvelles amitiés. Venez les rencontrer ! 🙂</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.share_flat">
+                <source>home.why_register.share_flat</source>
+                <target>Partager un logement entre ami·e·s</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.share_flat.description">
+                <source>home.why_register.share_flat.description</source>
+                <target>A terme, moment a vocation à faciliter la création de colocations entre 60 ans et plus dans toute la France. Partagez votre logement et vos loisirs entre ami·e·s au quotidien !</target>
+            </trans-unit>
+            <trans-unit id="home.why_register.register">
+                <source>home.why_register.register</source>
+                <target>Créer un compte</target>
+            </trans-unit>
+            <trans-unit id="home.why_moment">
+                <source>home.why_moment</source>
+                <target>Pourquoi moment ?</target>
+            </trans-unit>
+            <trans-unit id="home.why_moment.mission">
+                <source>home.why_moment.mission</source>
+                <target>La mission moment</target>
+            </trans-unit>
+            <trans-unit id="home.why_moment.mission.description">
+                <source>home.why_moment.mission.description</source>
+                <target>Proposer un nouvel accompagnement dans le "mieux vieillir" et réduire l'impact de l'âgisme que notre société nous impose.</target>
+            </trans-unit>
+            <trans-unit id="home.why_moment.ambition">
+                <source>home.why_moment.ambition</source>
+                <target>Notre ambition</target>
+            </trans-unit>
+            <trans-unit id="home.why_moment.ambition.description">
+                <source>home.why_moment.ambition.description</source>
+                <target>À terme, nous souhaitons permettre à des milliers de 60 ans et plus de sortir de l’isolement en vivant de grandes amitiés notamment via la colocation.</target>
+            </trans-unit>
+            <trans-unit id="home.why_moment.about">
+                <source>home.why_moment.about</source>
+                <target>En savoir plus sur moment</target>
+            </trans-unit>
+            <trans-unit id="privacy.title">
+                <source>privacy.title</source>
+                <target>Politique de confidentialité</target>
+            </trans-unit>
+            <trans-unit id="cookies.title">
+                <source>cookies.title</source>
+                <target>Politique de gestion des cookies</target>
+            </trans-unit>
+            <trans-unit id="legals.title">
+                <source>legals.title</source>
+                <target>Mentions légales</target>
+            </trans-unit>
+            <trans-unit id="cgu.title">
+                <source>cgu.title</source>
+                <target>Conditions Générales d'utilisation</target>
+            </trans-unit>
+            <trans-unit id="about.title">
+                <source>about.title</source>
+                <target>À propos</target>
+            </trans-unit>
+            <trans-unit id="about.description">
+                <source>about.description</source>
+                <target>moment est un projet entrepreneurial à visée sociale, né en 2020 et qui continue à grandir grâce à sa communauté.</target>
+            </trans-unit>
+            <trans-unit id="login.title">
+                <source>login.title</source>
+                <target>Se connecter</target>
+            </trans-unit>
+            <trans-unit id="login.submit">
+                <source>login.submit</source>
+                <target>Se connecter</target>
+            </trans-unit>
+            <trans-unit id="login.remember_me">
+                <source>login.remember_me</source>
+                <target>Rester connecté-e</target>
+            </trans-unit>
+            <trans-unit id="login.email">
+                <source>login.email</source>
+                <target>Adresse e-mail / Courriel</target>
+            </trans-unit>
+            <trans-unit id="login.password">
+                <source>login.password</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="login.forgot_password">
+                <source>login.forgot_password</source>
+                <target>J'ai oublié mon mot de passe</target>
+            </trans-unit>
+            <trans-unit id="login.description">
+                <source>login.description</source>
+                <target>Vous avez déjà un compte chez moment ? Renseignez vos identifiants pour vous inscrire aux événements et participer aux groupes de discussion.</target>
+            </trans-unit>
+            <trans-unit id="login.not_registered">
+                <source>login.not_registered</source>
+                <target>Vous n'avez pas encore de compte ?</target>
+            </trans-unit>
+            <trans-unit id="login.error.not_verified_account">
+                <source>login.error.not_verified_account</source>
+                <target>Vous devez valider votre compte grâce au mail de confirmation reçu.</target>
+            </trans-unit>
+            <trans-unit id="register.title">
+                <source>register.title</source>
+                <target>Créer un compte</target>
+            </trans-unit>
+            <trans-unit id="register.firstName">
+                <source>register.firstName</source>
+                <target>Prénom</target>
+            </trans-unit>
+            <trans-unit id="register.lastName">
+                <source>register.lastName</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="register.lastName.help">
+                <source>register.lastName.help</source>
+                <target>Seuls les administrateurs du site pourront voir votre nom.</target>
+            </trans-unit>
+            <trans-unit id="register.email">
+                <source>register.email</source>
+                <target>Adresse e-mail / Courriel</target>
+            </trans-unit>
+            <trans-unit id="register.password">
+                <source>register.password</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="register.password.help">
+                <source>register.password.help</source>
+                <target>Votre mot de passe doit faire au moins 10 caractères et contenir au moins une minuscule et une majuscule.</target>
+            </trans-unit>
+            <trans-unit id="register.repeated_password">
+                <source>register.repeated_password</source>
+                <target>Confirmer votre mot de passe</target>
+            </trans-unit>
+            <trans-unit id="register.repeated_password.help">
+                <source>register.repeated_password.help</source>
+                <target>Retaper le mot de passe entré ci-dessus.</target>
+            </trans-unit>
+            <trans-unit id="register.birthday">
+                <source>register.birthday</source>
+                <target>Date de naissance</target>
+            </trans-unit>
+            <trans-unit id="register.howYouHeardAboutUs">
+                <source>register.howYouHeardAboutUs</source>
+                <target>Comment vous nous avez connus ?</target>
+            </trans-unit>
+            <trans-unit id="register.description">
+                <source>register.description</source>
+                <target>En créant un compte, vous aurez accès aux événements près de chez vous. C’est entièrement gratuit et sans engagement ! Vos données personnelles sont protégées et ne sont pas revendues.</target>
+            </trans-unit>
+            <trans-unit id="register.submit">
+                <source>register.submit</source>
+                <target>Créer mon compte</target>
+            </trans-unit>
+            <trans-unit id="register.mandatory_fields">
+                <source>register.mandatory_fields</source>
+                <target>Tous les champs sont obligatoires</target>
+            </trans-unit>
+            <trans-unit id="register.succeeded.title">
+                <source>register.succeeded.title</source>
+                <target>Vérifiez vos emails</target>
+            </trans-unit>
+            <trans-unit id="register.succeeded.verified">
+                <source>register.succeeded.verified</source>
+                <target>Votre compte a bien été vérifié, vous pouvez maintenant vous connecter.</target>
+            </trans-unit>
+            <trans-unit id="register.succeeded.description">
+                <source>register.succeeded.description</source>
+                <target>Pour valider la création de votre compte et accéder à votre profil, confirmez votre adresse mail en cliquant sur le lien reçu à votre adresse.</target>
+            </trans-unit>
+            <trans-unit id="register.succeeded.email_not_received">
+                <source>register.succeeded.email_not_received</source>
+                <target>Si vous n'avez pas reçu d'email, vous pouvez en renvoyer un en cliquant sur le bouton ci-dessous.</target>
+            </trans-unit>
+            <trans-unit id="register.succeeded.send_link">
+                <source>register.succeeded.send_link</source>
+                <target>Renvoyer un lien</target>
+            </trans-unit>
+            <trans-unit id="register.already_registered">
+                <source>register.already_registered</source>
+                <target>Vous avez déjà un compte ?</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.title">
+                <source>forgot_password.title</source>
+                <target>Mot de passe oublié ?</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.submit">
+                <source>forgot_password.submit</source>
+                <target>Envoyer un lien de réinitialisation</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.description">
+                <source>forgot_password.description</source>
+                <target>Entrez votre mail ci-dessous. Nous vous enverrons un lien de réinitialisation de votre mot de passe.</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.succeeded">
+                <source>forgot_password.succeeded</source>
+                <target>Si cette adresse e-mail est enregistrée chez moment, vous recevrez un lien pour réinitialiser votre mot de passe.</target>
+            </trans-unit>
+            <trans-unit id="forgot_password.back_to_login">
+                <source>forgot_password.back_to_login</source>
+                <target>Retour à la connexion</target>
+            </trans-unit>
+            <trans-unit id="reset_password.succeeded">
+                <source>reset_password.succeeded</source>
+                <target>Votre mot de passe a bien été changé. Vous pouvez dès à présent vous connecter en utilisant votre nouveau mot de passe.</target>
+            </trans-unit>
+            <trans-unit id="reset_password.password.old">
+                <source>reset_password.password.old</source>
+                <target>Mot de passe actuel</target>
+            </trans-unit>
+            <trans-unit id="reset_password.password">
+                <source>reset_password.password</source>
+                <target>Nouveau mot de passe</target>
+            </trans-unit>
+            <trans-unit id="reset_password.repeated_password">
+                <source>reset_password.repeated_password</source>
+                <target>Retaper votre nouveau mot de passe</target>
+            </trans-unit>
+            <trans-unit id="reset_password.submit">
+                <source>reset_password.submit</source>
+                <target>Changer mon mot de passe</target>
+            </trans-unit>
+            <trans-unit id="reset_password.title">
+                <source>reset_password.title</source>
+                <target>Changer mon mot de passe</target>
+            </trans-unit>
+            <trans-unit id="reset_password.token.error">
+                <source>reset_password.token.error</source>
+                <target>Le changement de mot de passe a échoué, veuillez faire une nouvelle demande.</target>
+            </trans-unit>
+            <trans-unit id="events.title">
+                <source>events.title</source>
+                <target>Événements</target>
+            </trans-unit>
+            <trans-unit id="events.jumbotron.line1">
+                <source>events.jumbotron.line1</source>
+                <target>Les moments se rencontrent régulièrement pour partager autour de leurs centres d’intérêt (ou en découvrir de nouveaux) et tisser de nouvelles amitiés !</target>
+            </trans-unit>
+            <trans-unit id="events.jumbotron.line2">
+                <source>events.jumbotron.line2</source>
+                <target>Et si vous partiez à la rencontre de moments près de chez vous ? 😉</target>
+            </trans-unit>
+            <trans-unit id="events.next_events.title">
+                <source>events.next_events.title</source>
+                <target>Événements à venir</target>
+            </trans-unit>
+            <trans-unit id="events.list.attendee">
+                <source>events.list.attendee</source>
+                <target>{0} Aucun participant | {1} 1 participant | ]1,Inf[ %count% participants</target>
+            </trans-unit>
+            <trans-unit id="events.register.title">
+                <source>events.register.title</source>
+                <target>Inscription à l'événement</target>
+            </trans-unit>
+            <trans-unit id="events.register.comment">
+                <source>events.register.comment</source>
+                <target>Commentaire</target>
+            </trans-unit>
+            <trans-unit id="events.cancel_registration">
+                <source>events.cancel_registration</source>
+                <target>Annuler mon inscription</target>
+            </trans-unit>
+            <trans-unit id="events.cancel_registration.success">
+                <source>events.cancel_registration.success</source>
+                <target>Votre désinscription a bien été prise en compte !</target>
+            </trans-unit>
+            <trans-unit id="events.register.comment.help">
+                <source>events.register.comment.help</source>
+                <target>Si vous avez une remarque, une question, un besoin, vous pouvez le communiquer à l’origanisateur ici. A noter que les organisateurs sont des bénévoles.</target>
+            </trans-unit>
+            <trans-unit id="events.register.submit">
+                <source>events.register.submit</source>
+                <target>Valider mon inscription</target>
+            </trans-unit>
+            <trans-unit id="events.register.failed">
+                <source>events.register.failed</source>
+                <target>Vous ne pouvez pas vous inscrire à l'événement. Il se peut que vous soyez déjà inscrit ou qu'il n'y ai plus de place disponible.</target>
+            </trans-unit>
+            <trans-unit id="events.register.full">
+                <source>events.register.full</source>
+                <target>Cet événement est complet.</target>
+            </trans-unit>
+            <trans-unit id="events.register.succeded.title">
+                <source>events.register.succeded.title</source>
+                <target>Vous êtes bien inscrit·e</target>
+            </trans-unit>
+            <trans-unit id="events.register.succeded.detail">
+                <source>events.register.succeded.detail</source>
+                <target>Votre inscription est confirmée à "%title%". Vous recevrez plus d’informations dans les jours précédant l’événement. Pensez à surveiller vos e-mails !</target>
+            </trans-unit>
+            <trans-unit id="events.detail.owner.title">
+                <source>events.detail.owner.title</source>
+                <target>Cet événement est organisé par</target>
+            </trans-unit>
+            <trans-unit id="events.detail.registrations">
+                <source>events.detail.registrations</source>
+                <!-- TODO: pluralize -->
+                <target>%nbAttendees% inscrits - <![CDATA[<strong>]]>%nbAvailablePlaces% places disponibles<![CDATA[</strong>]]></target>
+            </trans-unit>
+            <trans-unit id="events.detail.register.anonymousWarning">
+                <source>events.detail.register.anonymousWarning</source>
+                <target>Vous devez être connecté·e pour vous inscrire et recevoir les informations de rendez-vous.</target>
+            </trans-unit>
+            <trans-unit id="events.detail.register">
+                <source>events.detail.register</source>
+                <target>S'inscrire à cet événement</target>
+            </trans-unit>
+            <trans-unit id="events.registered">
+                <source>events.registered</source>
+                <target>Inscrit·e !</target>
+            </trans-unit>
+            <trans-unit id="dashboard.title">
+                <source>dashboard.title</source>
+                <target>Mon espace</target>
+            </trans-unit>
+            <trans-unit id="dashboard.complete_profile.cta">
+                <source>dashboard.complete_profile.cta</source>
+                <target>Compléter mon profil</target>
+            </trans-unit>
+            <trans-unit id="dashboard.latest_posts">
+                <source>dashboard.latest_posts</source>
+                <target>Nos derniers articles</target>
+            </trans-unit>
+            <trans-unit id="dashboard.sell_all_posts">
+                <source>dashboard.sell_all_posts</source>
+                <target>Voir tous les articles</target>
+            </trans-unit>
+            <trans-unit id="dashboard.complete_profile">
+                <source>dashboard.complete_profile</source>
+                <target>Vous êtes quasiment prêt·e à partir à la rencontre d’autres moments.<![CDATA[<br/>]]>Votre compte a été confirmé. Vous pouvez désormais compléter votre profil !</target>
+            </trans-unit>
+            <trans-unit id="dashboard.description">
+                <source>dashboard.description</source>
+                <target>A quels événements avez-vous envie de participer ?</target>
+            </trans-unit>
+            <trans-unit id="dashboard.welcome">
+                <source>dashboard.welcome</source>
+                <target>Bonjour %firstName% !</target>
+            </trans-unit>
+            <trans-unit id="dashboard.new_event">
+                <source>dashboard.new_event</source>
+                <target>Vous avez envie de créer un événement ?</target>
+            </trans-unit>
+            <trans-unit id="dashboard.new_event.description">
+                <source>dashboard.new_event.description</source>
+                <target>Vous avez des idées ? Discutons-en ! Écrivez-nous à : <![CDATA[<a href="mailto:contact@moment.fr">]]>contact@moment.fr<![CDATA[</a>]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard.upcoming_events">
+                <source>dashboard.upcoming_events</source>
+                <target>Vos événements à venir</target>
+            </trans-unit>
+            <trans-unit id="dashboard.upcoming_events.see_more">
+                <source>dashboard.upcoming_events.see_more</source>
+                <target>Voir plus d'événements</target>
+            </trans-unit>
+            <trans-unit id="profile.edit.title">
+                <source>profile.edit.title</source>
+                <target>Modifier mon profil</target>
+            </trans-unit>
+            <trans-unit id="profile.edit.password">
+                <source>profile.edit.password</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="profile.edit.password.change">
+                <source>profile.edit.password.change</source>
+                <target>Modifier mon mot de passe</target>
+            </trans-unit>
+            <trans-unit id="profile.edit.password.title">
+                <source>profile.edit.password.title</source>
+                <target>Modifier mon mot de passe</target>
+            </trans-unit>
+            <trans-unit id="profile.detail.title">
+                <source>profile.detail.title</source>
+                <target>Mon profil</target>
+            </trans-unit>
+            <trans-unit id="profile.detail.otherUser.title">
+                <source>profile.detail.otherUser.title</source>
+                <target>Profil de %username%</target>
+            </trans-unit>
+            <trans-unit id="profile.detail.picture">
+                <source>profile.detail.picture</source>
+                <target>Photo de profil</target>
+            </trans-unit>
+            <trans-unit id="profile.detail.registration">
+                <source>profile.detail.registration</source>
+                <target>Inscrit.e depuis %date%</target>
+            </trans-unit>
+            <trans-unit id="profile.detail.age">
+                <source>profile.detail.age</source>
+                <target>%age% ans</target>
+            </trans-unit>
+            <trans-unit id="profile.edit.public">
+                <source>profile.edit.public</source>
+                <target>Mes informations publiques</target>
+            </trans-unit>
+            <trans-unit id="profile.edit.private">
+                <source>profile.edit.private</source>
+                <target>Mes informations privées</target>
+            </trans-unit>
+            <trans-unit id="profile.firstName">
+                <source>profile.firstName</source>
+                <target>Prénom</target>
+            </trans-unit>
+            <trans-unit id="profile.lastName">
+                <source>profile.lastName</source>
+                <target>Nom de famille</target>
+            </trans-unit>
+            <trans-unit id="profile.email">
+                <source>profile.email</source>
+                <target>Adresse e-mail / Courriel</target>
+            </trans-unit>
+            <trans-unit id="profile.gender">
+                <source>profile.gender</source>
+                <target>Mon genre</target>
+            </trans-unit>
+            <trans-unit id="profile.gender.placeholder">
+                <source>profile.gender.placeholder</source>
+                <target>Sélectionner mon genre</target>
+            </trans-unit>
+            <trans-unit id="profile.gender.male">
+                <source>profile.gender.male</source>
+                <target>Homme</target>
+            </trans-unit>
+            <trans-unit id="profile.gender.female">
+                <source>profile.gender.female</source>
+                <target>Femme</target>
+            </trans-unit>
+            <trans-unit id="profile.gender.other">
+                <source>profile.gender.other</source>
+                <target>Autre</target>
+            </trans-unit>
+            <trans-unit id="profile.gender.no-binary">
+                <source>profile.gender.no-binary</source>
+                <target>Non-binaire</target>
+            </trans-unit>
+            <trans-unit id="profile.biography">
+                <source>profile.biography</source>
+                <target>A propos de moi</target>
+            </trans-unit>
+            <trans-unit id="profile.birthday">
+                <source>profile.birthday</source>
+                <target>Date de naissance</target>
+            </trans-unit>
+            <trans-unit id="profile.city">
+                <source>profile.city</source>
+                <target>Ma ville</target>
+            </trans-unit>
+            <trans-unit id="profile.myAge">
+                <source>profile.myAge</source>
+                <target>Mon âge</target>
+            </trans-unit>
+            <trans-unit id="profile.file">
+                <source>profile.file</source>
+                <target>Photo de profil</target>
+            </trans-unit>
+            <trans-unit id="profile.file.help">
+                <source>profile.file.help</source>
+                <target>Formats autorisés : .jpg, .jpeg, .png, .webp. Taille maximale : 1Mo</target>
+            </trans-unit>
+            <trans-unit id="profile.displayMyAge">
+                <source>profile.displayMyAge</source>
+                <target>Afficher mon âge sur mon profil</target>
+            </trans-unit>
+            <trans-unit id="profile.submit">
+                <source>profile.submit</source>
+                <target>Enregistrer</target>
+            </trans-unit>
+            <trans-unit id="profile.cancel">
+                <source>profile.cancel</source>
+                <target>Annuler</target>
+            </trans-unit>
+            <trans-unit id="profile.delete">
+                <source>profile.delete</source>
+                <target>Supprimer mon compte</target>
+            </trans-unit>
+            <trans-unit id="posts.title">
+                <source>posts.title</source>
+                <target>Articles</target>
+            </trans-unit>
+            <trans-unit id="posts.jumbotron.line1">
+                <source>posts.jumbotron.line1</source>
+                <target>Retrouvez ici toute l'actualité moment à travers une série d'articles.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

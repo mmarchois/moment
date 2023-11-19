@@ -1,0 +1,15 @@
+<div class="j-breadcrumb" style="--box-padding: var(--w)">
+    <div class="j-container">
+        <ul class="j-raw-list">
+            {% for item in items %}
+                <li>
+                    {% if item.path is defined %}
+                        <a href="{{ item.path }}">{{ item.title }}</a>
+                    {% else %}
+                        {{ item.title }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

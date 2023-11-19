@@ -1,0 +1,27 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Infrastructure\Adapter;
+
+use App\Application\PasswordHasherInterface;
+use App\Infrastructure\Security\SymfonyUser;
+use Symfony\Component\PasswordHasher\Hasher\PasswordHasherFactoryInterface;
+
+final class PasswordHasher implements PasswordHasherInterface
+{
+    public function __construct(
+        private PasswordHasherFactoryInterface $encoderFactory,
+    ) {
+    }
+
+    public function hash(#[\SensitiveParameter] string $password): string
+    {
+        return $this->encoderFactory->getPasswordHasher(SymfonyUser::class)->hash($password);
+    }
+
+    public function verify(string $hashedPassword, #[\SensitiveParameter] string $plainPassword): bool
+    {
+        return $this->encoderFactory->getPasswordHasher(SymfonyUser::class)->verify($hashedPassword, $plainPassword);
+    }
+}

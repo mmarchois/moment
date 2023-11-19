@@ -1,0 +1,85 @@
+{% extends 'layout.html.twig' %}
+
+{% set pageTitle = app.user.uuid == uuid ? 'profile.detail.title'|trans : 'profile.detail.otherUser.title'|trans({ '%username%': user.username }) %}
+
+{% block title %}
+    {{ pageTitle }} - {{ parent() }}
+{% endblock %}
+
+{% block main_tag %}<main class="j-background-alt-yellow">{% endblock %}
+
+{% block main %}
+    {% include 'common/breadcrumb.html.twig' with {
+        items: [
+            {
+                title: 'nav.dashboard'|trans,
+                path: path('app_dashboard'),
+            },
+            { title: pageTitle }
+        ]
+    } only %}
+
+    <h1 class="j-visually-hidden">{{ pageTitle }}</h1>
+
+    <div
+        class="j-container j-background-default j-box j-profile-container"
+        style="
+            --container-width: calc(115 * var(--w));
+            --container-padding-desktop: calc(8 * var(--w));
+            --box-padding: calc(4 * var(--w)) 0;
+            --box-padding-desktop: calc(6 * var(--w)) 0;"
+    >
+        <div class="j-profile" data-testid="profile">
+            <div class="j-profile-banner">
+                <div class="j-profile-picture j-frame" style="--frame-ratio: 1 / 1">
+                    {% if user.avatar %}
+                        <img src="{{ storageCdnUrl ~ '/' ~ user.avatar }}" alt="{{ 'profile.detail.picture'|trans }}">
+                    {% else %}
+                        <img src="{{ asset('images/placeholder.webp') }}" alt="{{ 'profile.detail.picture'|trans }}">
+                    {% endif %}
+                </div>
+                <div class="j-profile-details">
+                    <h2 class="j-profile-name j-text-default">
+                        {{ user.username }}
+                    </h2>
+                    {% if user.biography %}
+                        <p class="j-profile-bio j-text-display j-mobile-only">
+                            {{ user.biography }}
+                        </p>
+                    {% endif %}
+                    <div class="j-profile-info j-stack" style="--stack-gap: var(--v)">
+                        {% if user.city %}
+                            <div class="j-icon--left">
+                                {% include 'common/icons/house.svg.twig' with { attr: { class: 'j-icon j-icon--sm' } } only %}
+                                {{ user.city }}
+                            </div>
+                        {% endif %}
+
+                        {% if user.age %}
+                            <div class="j-icon--left">
+                                {% include 'common/icons/birthday_cake.svg.twig' with { attr: { class: 'j-icon j-icon--sm' } } only %}
+                                {{ 'profile.detail.age'|trans({ '%age%': user.age }) }}
+                            </div>
+                        {% endif %}
+
+                        <div class="j-icon--left">
+                            {% include 'common/icons/calendar.svg.twig' with { attr: { class: 'j-icon j-icon--sm' } } only %}
+                            {{ 'profile.detail.registration'|trans({'%date%': user.registrationDate|date('M Y') }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if user.biography %}
+                <p class="j-profile-bio j-text-display j-desktop-only">
+                    {{ user.biography }}
+                </p>
+            {% endif %}
+        </div>
+
+        {% if uuid == app.user.uuid %}
+            <a data-testid="edit-link" href="{{ path('app_profile_edit') }}" class="j-btn j-btn--action j-btn--secondary">
+                {{ 'profile.edit.title'|trans }}
+            </a>
+        {% endif %}
+    </div>
+{% endblock main %}

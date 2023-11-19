@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ 'events.register.title'|trans }} - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+    <div class="j-container">
+        <h1>{{ 'events.register.title'|trans }}</h1>
+        <h2>{{ event.title }}</h2>
+        <div>
+            {{ event.startDate|date('d/m/Y H:i') }} {{ event.endDate|date('d/m/Y H:i') }}<br/>
+            {{ event.location }}<br/>
+        </div>
+        {% if event.nbAvailablePlaces > 0 %}
+            {{ form(form, { attr: { 'data-testid': 'registration-form' } }) }}
+        {% else %}
+            <div data-testid="event-full">{{ 'events.register.full'|trans }}</div>
+        {% endif %}
+    </div>
+{% endblock main %}

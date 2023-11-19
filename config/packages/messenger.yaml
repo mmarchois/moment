@@ -1,0 +1,34 @@
+framework:
+    messenger:
+        default_bus: messenger.bus.commands
+        buses:
+            messenger.bus.commands:
+                middleware:
+                    - doctrine_ping_connection
+                    - doctrine_close_connection
+                    - validation
+                    - doctrine_transaction
+            messenger.bus.queries:
+                middleware:
+                    - validation
+
+        transports:
+            async:
+                dsn: "%env(REDIS_URL)%/messages"
+                retry_strategy:
+                    max_retries: 3
+                    # milliseconds delay - 10 seconds
+                    delay: 10_000
+                    # causes the delay to be higher before each retry
+                    # e.g. 10 second delay, 20 seconds, 40 seconds, etc.
+                    multiplier: 2
+                    max_delay: 0
+
+        routing:
+            'App\Application\AsyncCommandInterface': async
+
+when@test:
+   framework:
+       messenger:
+           transports:
+               async: 'sync://'

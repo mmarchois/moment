@@ -1,0 +1,54 @@
+{#
+Tweaks to the default Symfony form theme.
+Source: https://github.com/symfony/symfony/blob/6.3/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig
+#}
+{% use "form_div_layout.html.twig" %}
+
+{% block form_row %}
+    {% set widget_attr = {} %}
+    {%- if errors|length > 0 -%}
+        {%- set widget_attr = {attr: {class: 'j-has-error'}} -%}
+    {%- endif -%}
+
+    <div {% with {attr: row_attr} %} {{ block('attributes') }} {% endwith %}>
+        {{- form_label(form) -}}
+        {{- form_widget(form, widget_attr) -}}
+        {{- form_errors(form) -}}
+    </div>
+{% endblock form_row %}
+
+{% block form_errors %}
+    {% if errors|length > 0 %}
+        <div id="{{ id }}_error">
+            {%- for error in errors -%}
+                <p class="j-error-message">
+                    {{ error.message }}
+                </p>
+            {%- endfor -%}
+        </div>
+    {% endif %}
+{% endblock form_errors %}
+
+{% block form_label_content %}
+    {{ parent() }}
+    {{- form_help(form) -}}
+{% endblock %}
+
+{% block form_help %}
+  {%- set help_attr = help_attr|merge({class: (help_attr.class|default('') ~ ' j-help-text')}) -%}
+  {{ parent() }}
+{% endblock %}
+
+{%- block checkbox_row -%}
+    <div {% with { attr: row_attr } %} {{ block('attributes') }} {% endwith %}>
+        {{- form_widget(form) -}}
+        {{- form_label(form) -}}
+        {{- form_errors(form) -}}
+    </div>
+{%- endblock checkbox_row -%}
+
+{%- block choice_widget_collapsed -%}
+    <div class="j-select">
+        {{ parent() }}
+    </div>
+{%- endblock choice_widget_collapsed -%}
