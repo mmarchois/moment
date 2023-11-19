@@ -18,7 +18,7 @@ final class TokenFixture extends Fixture implements DependentFixtureInterface
             '7b9ed5b3-cb2e-4f77-88ef-5371a98de677',
             'confirmAccountToken',
             TokenTypeEnum::CONFIRM_ACCOUNT->value,
-            $this->getReference('admin'),
+            $this->getReference('user1'),
             new \DateTime('2023-08-26 09:00:00'),
         );
 
@@ -26,7 +26,7 @@ final class TokenFixture extends Fixture implements DependentFixtureInterface
             '217993a8-af4c-40ad-8afc-75d0e9415865',
             'expiredConfirmAccountToken',
             TokenTypeEnum::CONFIRM_ACCOUNT->value,
-            $this->getReference('user'),
+            $this->getReference('user2'),
             new \DateTime('2023-08-20 19:00:00'),
         );
 
@@ -34,7 +34,7 @@ final class TokenFixture extends Fixture implements DependentFixtureInterface
             '8edb17c6-9346-4e64-8a0d-bf1e4762802c',
             'forgotPasswordToken',
             TokenTypeEnum::FORGOT_PASSWORD->value,
-            $this->getReference('admin'),
+            $this->getReference('user1'),
             new \DateTime('2023-08-26 09:00:00'),
         );
 
@@ -42,7 +42,7 @@ final class TokenFixture extends Fixture implements DependentFixtureInterface
             '57b8d6cc-1b7b-4204-8a38-da30359a936e',
             'expiredForgotPasswordToken',
             TokenTypeEnum::FORGOT_PASSWORD->value,
-            $this->getReference('user'),
+            $this->getReference('user2'),
             new \DateTime('2023-08-20 19:00:00'),
         );
 

@@ -6,10 +6,12 @@ namespace App\Domain\Event;
 
 class Tag
 {
-    private string $title;
-
     public function __construct(
         private string $uuid,
+        private string $title,
+        private \DateTimeInterface $startDate,
+        private \DateTimeInterface $endDate,
+        private Event $event,
     ) {
     }
 
@@ -23,8 +25,18 @@ class Tag
         return $this->title;
     }
 
-    public function setTitle(string $title): void
+    public function getStartDate(): \DateTimeInterface
     {
-        $this->title = $title;
+        return $this->startDate;
+    }
+
+    public function getEndDate(): \DateTimeInterface
+    {
+        return $this->endDate;
+    }
+
+    public function getEvent(): Event
+    {
+        return $this->event;
     }
 }
